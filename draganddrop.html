@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang ="en"><!-- accessibility -->
+<head>
+		<meta charset = "utf-8">
+		<title> A Beautiful Mess - Transform your home mess into a beautiful mess.</title>
+		<meta name="description" content="Drag and drop feature is displayed. User can see calender for notifications">
+		<meta name = "keywords" content="home,decor,beautiful,kithen,trending,drag,drop,calender"> 
+		<meta name= "robots" content ="noindex">
+		<meta name ="viewport" content="width=device-width, initial-scale=1"><!-- for search engines -->
+		 <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.css' 			rel='stylesheet' />
+ 	 
+  	<style>
+   	 body {
+      margin: 40px 10px;
+      padding: 0;
+      font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+      font-size: 14px;
+    	}
+    	#calendar {
+      max-width: 900px;
+      margin: 0 auto;
+   	 }
+	</style>
+	<link rel="stylesheet" href="main.css">
+			<!-- [if lt IE9]>
+				<script src ="htmlshiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+	<script src="modernizr-custom.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+<img src="images/mainlogo1.jpg" alt="open symbol where a beautiful quote is written about home" class="logo">
+
+	<header role="banner">
+		<h1>A Beautiful Mess! </h1>
+	
+		<nav role="navigation">
+			<ul id="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="video-audio.html">Trendy Videos</a></li>
+				<li><a href="surveyform.html">Tell us More!</a></li>
+				<li><a href="canvastry.html">Latest Submission</a></li>
+				<li><a href="canvas.html">Second Submission</a></li>
+				<li><a href="canvas-rectangle.html">Banner</a></li>
+				<li><a href="draganddrop.html">Calendar</a></li>
+			</ul>	
+		</nav>
+	</header>
+	
+	
+	<main role="main">
+	
+	<section>
+	
+	<div class = "first">
+	<h2>Collect things you love, that are authentic to you and your HOUSE becomes your story!</h2>
+	</div>
+	
+		
+	 	<div id='calendar'></div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      header: {
+        right: 'prev,next today', //positions the the prev/next button on the right 
+        center: 'title', //sets the title of the month to center
+        left: 'month,basicWeek,basicDay' //positions the the prev/next button on the left 
+      },
+      defaultDate: '2019-05-16',
+      navLinks: true, // click on day/week names to navigate views
+      editable: true,
+      eventLimit: true, // add "more" link when there are too many events in a day
+      events: [
+      {
+          title: 'Complete Assignment', // title of an event
+          start: '2019-05-01' // date of an event
+        },
+        {
+          title: 'Enroll for your capestone project',
+          start: '2019-05-17',
+          end: '2019-05-19'
+        },
+        {
+          id: 999,
+          title: 'Besties birthday',
+          start: '2019-05-07T16:00:00'
+        },   
+        {
+          id: 999,
+          title: 'Attend meetup',
+          start: '2019-06-14T16:00:00'
+        },     
+        {
+          title: 'Visit Utopian-io',
+          url: 'http://utopian.io/',
+          start: '2019-06-20'
+        }
+      ]
+      });
+
+  });
+  </script>
+	</section>
+	
+<aside role="complementary">
+
+</aside>
+</main>
+
+<footer role="contentinfo">
+<address>
+    Written by <a href="mailto:abc@beautifulmess.com">Pooja Daryani</a>.<br> 
+    Write or visit me at:<br>
+    BeautifulMess.com<br>
+    370 Elan Village<br>
+    San Jose, CA 95134
+</address>
+	<p><small>Pooja Copyright © <time>2019</time>. All rights reserved.</small></p>
+
+</footer>
+
+</div>
+</body>
+</html>

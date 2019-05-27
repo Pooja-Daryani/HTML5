@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang ="en"><!-- accessibility -->
+<head>
+		<meta charset = "utf-8">
+		<title> A Beautiful Mess - Transform your home mess into a beautiful mess.</title>
+		<meta name="description" content="Check out the latest submission by one of our favourite regular customer.">
+		<meta name = "keywords" content="home,decor,animation, submissions,trending"> 
+		<meta name= "robots" content ="noindex">
+		<meta name ="viewport" content="width=device-width, initial-scale=1"><!-- for search engines -->
+		<link rel="stylesheet" href="main.css">
+			<!-- [if lt IE9]>
+				<script src ="htmlshiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+			<script src="modernizr-custom.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+<img src="images/mainlogo1.jpg" alt="open symbol where a beautiful quote is written about home" class="logo">
+
+	<header role="banner">
+		<h1>A Beautiful Mess! </h1>
+	
+		<nav role="navigation">
+			<ul id="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="video-audio.html">Trendy Videos</a></li>
+				<li><a href="surveyform.html">Tell us More!</a></li>
+				<li><a href="canvastry.html">Latest Submission</a></li>
+				<li><a href="canvas.html">Second Submission</a></li>
+				<li><a href="canvas-rectangle.html">Banner</a></li>
+				<!--<li><a href="geolocation.html">Geo-location</a></li>-->
+				<li><a href="draganddrop.html">Calendar</a></li>
+			</ul>	
+		</nav>
+	</header>
+	
+	
+	<main role="main">
+	<section>
+	<h2>See how people are enjoying the lights.</h2>
+		
+		
+	<canvas id="c" width="900" height="600"></canvas>
+	
+	<script>
+	//initial
+	var w = c.width,
+    h = c.height = window.innerHeight,
+    ctx = c.getContext('2d'),
+    
+    //parameters
+    total = w,
+    accelleration = .05,
+    
+    //afterinitial calculations
+    size = w/total,
+    occupation = w/total,
+    repaintColor = 'rgba(0, 0, 0, .04)'
+    colors = [],
+    dots = [],
+    dotsVel = [];
+
+	//setting the colors' hue
+	//and y level for all dots
+	var portion = 360/total;
+	for(var i = 0; i < total; ++i){
+  	colors[i] = portion * i;
+  
+ 	 dots[i] = h;
+  	dotsVel[i] = 10;
+}
+
+	function anim(){
+  	window.requestAnimationFrame(anim);
+  
+  	ctx.fillStyle = repaintColor;
+  	ctx.fillRect(0, 0, w, h);
+  
+  	for(var i = 0; i < total; ++i){
+    var currentY = dots[i] - 1;
+    dots[i] += dotsVel[i] += accelleration;
+    
+    ctx.fillStyle = 'hsl('+ colors[i] + ', 80%, 50%)';
+    ctx.fillRect(occupation * i, currentY, size, dotsVel[i] + 1);
+    
+    if(dots[i] > h && Math.random() < .01){
+      dots[i] = dotsVel[i] = 0;
+    }
+  }
+}
+
+anim();
+</script>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+<address>
+    Written by <a href="mailto:abc@beautifulmess.com">Pooja Daryani</a>.<br> 
+    Write or visit me at:<br>
+    BeautifulMess.com<br>
+    370 Elan Village<br>
+    San Jose, CA 95134
+</address>
+	<p><small>Pooja Copyright © <time>2019</time>. All rights reserved.</small></p>
+<!--	<p>The following are the citations of the pictures used in this web page</p>
+	<ul>
+	<li>
+	<cite>
+<a href="https://pixabay.com/photos/home-decor-design-interior-quote-660378/" target="_blank">"Logo"</a> is licensed under <a href="https://pixabay.com/service/license/" target="_blank">Pixabay License</a>
+</cite>
+</li>
+<li>
+	
+	<cite>
+<a href="https://pxhere.com/en/photo/1328149" target="_blank">"Image"</a> is licensed under <a href="https://pixabay.com/service/license/" target="_blank">Pixabay License</a>
+</cite>
+</li>
+<li>
+<cite>
+<a href="https://www.flickr.com/photos/rubbermaid/7203339996" target="_blank">"Image"</a> is licensed under <a href="https://pixabay.com/service/license/" target="_blank"></a>
+</cite>
+</li>
+<li>
+<cite>
+<a href="https://torange.biz/sewing-44548" target="_blank">"Image"</a> is licensed under <a href="https://pixabay.com/service/license/" target="_blank"></a>
+</cite>
+</li>
+https://pixabay.com/photos/cherry-blossom-flower-branch-tree-4065442/
+</ul>-->
+</footer>
+
+</div>
+</body>
+</html>

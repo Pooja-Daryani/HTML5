@@ -1,0 +1,138 @@
+body{
+        
+	font:100% Verdana, Arial, sans-serif;
+	color:#000;
+	background-color:#fff;
+	background-image:url(images/background6.jpg);
+    background-repeat:repeat;       
+    background-size:contain;
+   
+	
+	
+}
+#wrapper{
+	background-color:#fff;
+	width:950px;
+	margin:50px auto;
+	border:5px solid #440404;
+	position:relative;
+	color:#440404;
+	padding-left:20px;
+	padding-right:20px;
+	
+}
+.logo {
+	position:absolute;
+	top:0;
+	right:-25px;
+	padding-top:5px;
+	padding-right:30px;
+	margin-bottom:20px;
+	margin-right:20px;
+	
+	
+}
+header h1{
+	font-family:"Lucida Calligraphy","Script MT Bold",cursive;
+	font-size: 40px;
+	font-style:normal;
+	font-weight: 900;
+	font-variant:normal;
+	background-color:#fff;
+	color:#440404;
+	padding:15px 15px 30px 25px;
+}
+nav{
+	background:#440404;
+	border-top:#fff;
+	border:3px dashed #fff;	
+}
+nav ul{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+}
+nav ul li{
+	display:inline;
+	margin-left:-4px;
+}
+
+nav ul li a {
+	color:#fff;
+	text-decoration:none;
+	padding:5px 10px;
+	border-right:1px solid #fff;
+}
+nav ul li a:hover {
+	background:#ddb5c8;
+	color:#fff;
+	}
+
+.first{
+	font-family:"Hops and Barley", Smoothy, cursive;
+	font-size: 20px;
+	font-style:normal;
+}
+.second{
+	font-family:"Century Gothic", "Gill Sans", Arial, sansserif;
+}
+.special{
+  	
+    border-right:10px;
+    margin:5px 90px;
+	border:5px solid  #440404;
+	background-image:url(images/background1.jpg);
+	padding:10px;
+}
+footer{
+	font:0.875em/1.4em Verdana,Arial,sans-serif;
+	background-image:url(images/background1.jpg);
+	color:#440404;
+	background-color:#f4d9c1;;
+	padding:10px 20px;
+	border:3px dashed #440404;
+	
+}
+
+#audio{
+	font:0.875em/1.4em Verdana,Arial,sans-serif;
+	background-image:url(images/background1.jpg);
+	color:#440404;
+	background-color:#f4d9c1;
+	padding:10px 20px;
+	border:3px dashed #440404;
+}
+
+
+#audio button{
+	
+	border:3px solid #440404;
+}
+#form button{
+	
+	border:3px solid #440404;
+}
+
+
+#container {
+  box-shadow: inset 0 1px 0 #444, 0 -1px 0 #000;
+  height: 140px;
+  left: 50%;
+  margin: -70px 0 0 -60px;
+  position: absolute;
+  top: 50%;
+  width:120px;
+  }
+  
+#location, #distance {
+	padding:5px;
+}
+#map {
+	margin:5px;
+	width:900px;
+	height:760px;
+	border:1px solid #000;
+	background-image:url(images/location.png);
+}

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<title>Tell us more about your Choices - Survey form</title>
+	<meta name="description" content="Tell us more about your choices is the survey form which wants to more about user so that the blog can how the related items to the user">
+	<meta name="robots" content="noindex">
+	<meta name="keywords" content="form, color, choices, interest, trending">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<!-- [if lt IE9]>
+				<script src ="htmlshiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+			<script src="modernizr-custom.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+<img src="images/mainlogo1.jpg" alt="open symbol" class="logo">
+
+	<header role="banner">
+		<h1>A Beautiful Mess! </h1>
+	<nav role="navigation">
+			<ul id="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="video-audio.html">Trendy Videos</a></li>
+				<li><a href="surveyform.html">Tell us More!</a></li>
+				<li><a href="canvastry.html">Latest Submission</a></li>
+				<li><a href="canvas.html">Second Submission</a></li>
+				<li><a href="canvas-rectangle.html">Banner</a></li>
+				<!--<li><a href="geolocation.html">Geo-location</a></li>-->
+				<li><a href="draganddrop.html">Calendar</a></li>
+			</ul>	
+		</nav>
+	</header>
+		
+	<main role="main">
+	<div class = "first">
+	<h2>Collect things you love, that are authentic to you and your HOUSE becomes your story!</h2>
+	</div>
+	
+
+	<section>
+	<h3>Tell us more about you!</h3>
+		<p>We would like to know more about your interests, so that we can display your choice topics. Here is the form that we would like you to fill out that will help us to know more about you:</p>
+		
+		<form action="#" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Contact Information</legend>
+			
+		<br><br>
+			
+		<label for="fname">First Name: </label>
+		<input type="text" id="fname" name="fname" autofocus autocomplete="given-name">
+		
+		<br><br>
+		
+		<label for="lname">Last Name: </label>
+		<input type="text" id="lname" name="lname" autocomplete="family-name">
+		
+		<br><br>
+		
+		<label for="email">Email (you can enter more than one using comma to separate)</label>
+		<input type="email" id="email" name="email" multiple size="40" autocomplete="email">
+		
+		<br><br>
+		
+		<label for="phone">Phone Number: </label>
+		<input type="tel" id="phone" name="phone" placeholder="222-222-2222" required pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" title="Please include area code and hyphens and 10 numbers: for example:222-222-222">*(required)
+		
+		<br><br>
+		<label for="promocode">Promotional Code: </label>
+		<input type="text" id="promocode" name="promocode" placeholder="QRBV-0012" pattern="[A-Z]{4}-[0-9]{4}" title="Make sure that you typing four upper-case letters, a hyphen, and 4 numbers. For example: QRB-001">
+		
+		
+		<br><br>
+		
+		<label for="url">What is your website URL? So that we can show on our blog</label>
+		<input type="url" id="url" name="url">
+		
+		<br><br>
+		<label for="zip">Zip Code</label>
+		<input type="text" id="zip" name="zip" size="5" maxlength="5">
+		
+		<br><br>
+		
+		<label for="state">State: </label>
+		<select id="state" name="state" multiple size="3">
+			<option value="default">&nbsp;</option>
+			<option value="CA">California</option>
+			<option value="WA">Washington</option>
+			<option value="OR">Oregon</option>
+			<option value="AZ">Arizona</option>
+			<option value="NV">Nevada</option>
+		</select>
+		<br><br>
+		
+		<label for="state1">State: </label>
+	<select id="state1" name="state1">
+		<option value="blank">&nbsp;</option>
+		<optgroup label="Western States">
+			<option value="CA">California</option>
+			<option value="WA">Washington</option>
+			<option value="OR">Oregon</option>
+			<option value="AZ">Arizona</option>
+			<option value="HI">Hawaii</option>
+			<option value="NV">Nevada</option>
+		</optgroup>
+		<optgroup label="Eastern States">
+			<option value="NY">New York</option>
+			<option value="NH">New Hamshire</option>
+			<option value="VT">Vermont</option>
+			<option value="RI">Rhode Island</option>
+			<option value="ME">Maine</option>
+			<option value="NJ">New Jersey</option>
+		</optgroup>
+
+	</select>
+		<br><br>
+		<label for="pw">Password: </label>
+		<input type="password" id="pw" name="pw">
+		
+		</fieldset>
+		<fieldset>
+			<legend>Information</legend>
+			
+			<label for="date">Date: </label>
+			<input type="date" id="date" name="date">
+			
+			<br><br>
+			
+			<label for="month">Month: </label>
+			<input type="month" id="month" name="month">
+		
+			<br><br>
+		
+			<label for="week">Week: </label>
+			<input type="week" id="week" name="week">	
+		
+			<br><br>
+			<label for="time">Time: </label>
+			<input type="time" id="time" name="time">
+			
+			<br><br>
+			<label for="color">Which Color themes would you like to see on our blog: </label>
+			<input type="color" id="color" name="color">
+		
+			<br><br>
+			<label for="number">How many new articles would you like to see daily? </label>
+			<input type="number" id="number" name="number">
+		
+			<br><br>
+			<label for="fav-chocolate">Favorite type of Chocolate</label>
+			<input type="text" id="fav-chocolate" name="fav-chocolate" list="choctype">
+			<datalist id="choctype">
+			<option value="dark 80%">
+			<option value="dark 70%">
+			<option value="milk">
+			<option value="white">
+		</datalist>
+		
+		<br><br>
+		<label for="range">Range: </label>
+		<input type="range" id="range" name="range" min="10" max="50" list="tickmarks">
+		<datalist id="tickmarks">
+			<option value="0" label="0%">
+			<option value="10">
+			<option value="20">
+			<option value="30" label="30%">
+			<option value="40">
+			<option value="50" label="50%">
+		
+		</datalist>
+	
+	<br><br>
+		<label for="fader">How easy was it to fill out this form?</label>
+		<input type="range" id="fader" name="fader" min="0" max="5" value="0" step="1" list="ratesettings" oninput="outputUpdate(value)">
+		<output for="fader" id="rating">0</output>
+		<datalist id="ratesettings">
+			<option label="0">0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</datalist>
+		
+		<br><br>
+		What kind of topics are your favourite on our blog?<br>
+		<label>
+		<input type="checkbox" name="blog-choice" value="home decorations">Home Decors
+		</label>
+			<br>
+		<label>
+		<input type="checkbox" name="blog-choice" value="kitchen trends">Kitchen Trends
+		</label>
+		<br>
+		<label>
+		<input type="checkbox" name="blog-choice" value="clothes collection">Clothes collection
+		</label>
+		<br>
+		<label>
+		<input type="checkbox" name="blog-choice" value="sewing patterns" checked>Sewing Patterns
+		</label>
+		<br>
+		<label>
+		<input type="checkbox" name="blog-choice" value="season trends">Season Trends
+		</label>
+		<br>
+		<label>
+		<input type="checkbox" name="blog-choice" value="trendy recipies">Trendy sRecipes
+		</label>
+		
+		<br><br>
+		Select a topic you would like to like hear about more (only one):<br>
+		<label>
+			<input type="radio" name="topic" value="food">Food</label>
+			<label>
+			<input type="radio" name="topic" value="clothes">Clothes</label>
+			<label>
+			<input type="radio" name="topic" value="holidays">Holidays</label>
+		
+		<br><br>
+		We would love to have you in our mailing list.Would you like to join?<br>
+		<label>
+		<input type="checkbox" name="mailing-list" value="Yes" checked>
+		Yes, Please add me!
+		</label>
+	
+		<br><br>
+	
+		<label for="comments">Please tell us which other things you would like to see on our blog. Please write your comments here:</label><br>
+		<textarea id="comments" name="comments" cols="100" rows="20"></textarea>
+	
+		<br><br>
+		Upload your most favourite recipe picture or any favourite one and tell us more about it.(May be you win a lucky chance to display that on our 		 website.)<br>
+	<label for="upload">Upload your file here:</label>
+	<input type="file" id="upload" name="upload">
+	<br><br>
+	
+		
+		</fieldset>
+	
+		<input type="submit">
+		<input type="submit" value="Send this form now!"><input type="reset" value="Clear this form">
+		</form>	
+	</section>
+
+<aside role="complementary">
+
+</aside>
+</main>
+<br>
+<footer role="contentinfo">
+<address>
+    Written by <a href="mailto:abc@beautifulmess.com">Pooja Daryani</a>.<br> 
+    Write or visit me at:<br>
+    BeautifulMess.com<br>
+    370 Elan Village<br>
+    San Jose, CA 95134
+</address>
+	<p><small>Pooja Copyright © <time>2019</time>. All rights reserved.</small></p>
+	</footer>
+<script>
+function outputUpdate(rate) {
+	document.querySelector('#rating').value = rate;
+}
+
+</script>
+</div>
+</body>
+</html>

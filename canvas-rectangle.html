@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang ="en"><!-- accessibility -->
+<head>
+		<meta charset = "utf-8">
+		<title> A Beautiful Mess - Transform your home mess into a beautiful mess.</title>
+		<meta name="description" content="Check out. Our latest banner designs that you would like to use on your websites">
+		<meta name = "keywords" content="banner, rectangle, circle, colors"> 
+		<meta name= "robots" content ="noindex">
+		<meta name ="viewport" content="width=device-width, initial-scale=1"><!-- for search engines -->
+		<link rel="stylesheet" href="main.css">
+		<style>
+		#mycanvas {border:2px solid #666;}
+		#mycanvas{background : #ef8175;}
+
+		</style>
+			<!-- [if lt IE9]>
+				<script src ="htmlshiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+			<script src="modernizr-custom.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<img src="images/mainlogo1.jpg" alt="open symbol where a beautiful quote is written about home" class="logo">
+
+	<header role="banner">
+		<h1>A Beautiful Mess! </h1>
+	
+		<nav role="navigation">
+			<ul id="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="video-audio.html">Trendy Videos</a></li>
+				<li><a href="surveyform.html">Tell us More!</a></li>
+				<li><a href="canvastry.html">Latest Submission</a></li>
+				<li><a href="canvas.html">Second Submission</a></li>
+				<li><a href="canvas-rectangle.html">Banner</a></li>
+				<!--<li><a href="geolocation.html">Geo-location</a></li>-->
+				<li><a href="draganddrop.html">Calendar</a></li>
+			</ul>	
+		</nav>
+	</header>
+	
+	
+	<main role="main">
+	<section>
+		<h2>Some of the banner designs. You can use these!</h2>
+		<canvas id="mycanvas" width="900" height= "700"></canvas>
+		
+		<script>
+			var cnv = document.getElementById('mycanvas');
+			var ctx = cnv.getContext('2d');
+			var ctx1 = cnv.getContext('2d');
+			var ctx2 = cnv.getContext('2d');
+			
+			// Draw Rectangle
+			ctx.strokeStyle = 'blue';
+			ctx.lineWidth = '4';
+			
+			//ctx.fillStyle = 'green';
+			//ctx.fillRect(95, 25, 50, 100);
+			//ctx.fillStyle = 'green';
+			//ctx.fillRect(95, 25, 50, 100);
+			// clears areas within the rectangle
+			//ctx.clearRect(130, 160, 80, 80);
+			//ctx.clearRect(240, 160, 80, 80);
+			//ctx.clearRect(100, 10, 10, 50);
+			
+			//first rectangle
+			ctx.strokeStyle = '#fff';
+			ctx.lineWidth = '4';
+			ctx.fillStyle ='black';
+			ctx.fillRect(100, 125, 600, 200) ;
+			ctx.strokeRect(100, 125, 600, 200);
+			ctx.strokeStyle = 'blue';
+			ctx.lineWidth = '4';
+			
+			//second rectangle
+			ctx.strokeStyle = '#fff';
+			ctx.lineWidth = '4';
+			ctx.fillStyle ='black';
+			ctx.fillRect(100, 375, 600, 200) ;
+			ctx.strokeRect(100, 375, 600, 200);
+			ctx.strokeStyle = 'blue';
+			ctx.lineWidth = '4';
+			
+			//triangle
+			ctx.moveTo(100, 130);
+			ctx.lineTo(100, 320);
+			ctx.lineTo(200, 230);
+			ctx.closePath();
+			ctx.fillStyle = 'orange';
+			ctx.fill();
+			ctx.lineWidth = '10';
+			ctx.strokeStyle = 'red';
+			ctx.lineJoin = 'round'  // round or bevel
+			ctx.stroke();
+			
+			
+			//second triangle
+			ctx.moveTo(700, 130);
+			ctx.lineTo(700, 320);
+			ctx.lineTo(600, 230);
+			ctx.closePath();
+			ctx.fillStyle = 'orange';
+			ctx.fill();
+			ctx.lineWidth = '10';
+			ctx.strokeStyle = 'white';
+			ctx.lineJoin = 'round'  // round or bevel
+			ctx.stroke();
+
+			//circle
+			ctx.closePath();
+			ctx1.fillStyle = '#2df704';
+			ctx1.arc(480, 540, 6, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = '#2df704';
+			ctx1.arc(440, 440, 6, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(440, 450,2 , 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(450, 460,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(430, 480,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(430, 520,10, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(430, 540,6, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(420, 560,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(420, 440,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(420, 420,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(400, 420,8, 0, Math.PI*2, false);
+			ctx1.fill();
+
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(390, 400,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(370, 400,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(370, 420,8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(370, 440,10, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(390, 460,12, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(410, 480,12, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(410, 510,12, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(390, 520,12, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(360, 540,14, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(380, 560,14, 0, Math.PI*2, false);
+			ctx1.fill();
+
+
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(460, 560, 4, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(520, 500, 3, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(530, 490, 8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(560, 430, 10, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(450, 420, 30, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(580, 800, 20, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(600, 700, 2, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(610, 500, 3, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(280, 540, 6, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(610, 550, 8, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(620, 510, 20, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(660, 430, 24, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(630, 430, 2, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(680, 400, 15, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(650, 460, 40, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(620, 420, 15, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(450, 500, 15, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(500, 500, 40, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(500, 450, 30, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(500, 550, 20, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(560, 420, 40, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(580, 520, 50, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(660, 520, 30, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(670, 540, 30, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(630, 540, 30, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(665, 408, 32, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(600, 450, 35, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = 'green';
+			ctx1.arc(550, 460, 35, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			ctx.closePath();
+			ctx1.fillStyle = '#2df704';
+			ctx1.arc(520, 540, 35, 0, Math.PI*2, false);
+			ctx1.fill();
+			
+			//text
+			ctx.fillStyle = '#2df704';
+			ctx.font = 'italic bold 24px Arial';
+			ctx.textAlign = 'center';
+			ctx.fillText('Background banner design', 400, 230);
+			
+			//text
+			ctx.strokeStyle = '#2df704';
+			ctx.lineWidth = '3';
+			ctx.font = 'bold 40px "Trebuchet MS"';
+			ctx.textAlign = 'right';
+			ctx.strokeText('Banner design', 380, 500, 550);
+		</script>
+		</section>
+	</main>
+<br><br>
+<footer role="contentinfo">
+<address>
+    Written by <a href="mailto:abc@beautifulmess.com">Pooja Daryani</a>.<br> 
+    Write or visit me at:<br>
+    BeautifulMess.com<br>
+    370 Elan Village<br>
+    San Jose, CA 95134
+</address>
+	<p><small>Pooja Copyright © <time>2019</time>. All rights reserved.</small></p>
+
+</footer>
+
+</div>
+</body>
+</html>
+	
+	
+
+
+
+

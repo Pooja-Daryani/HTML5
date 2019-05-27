@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<title>Tell us more about your Choices - Survey form</title>
+	<meta name="description" content="Come On Check out your geolocation and explore more about lattitude and longitude.">
+	<meta name="robots" content="noindex">
+	<meta name="keywords" content="accuracy,geolocation,lattitude,longitude,color">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="geolocation.js"></script>
+	<!-- [if lt IE9]>
+				<script src ="htmlshiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+			<script src="modernizr-custom.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+<img src="images/mainlogo1.jpg" alt="open symbol" class="logo">
+
+	<header role="banner">
+		<h1>A Beautiful Mess! </h1>
+	<nav role="navigation">
+			<ul id="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="video-audio.html">Trendy Videos</a></li>
+				<li><a href="surveyform.html">Tell us More!</a></li>
+				<li><a href="canvastry.html">Latest Submission</a></li>
+				<li><a href="canvas.html">Second Submission</a></li>
+				<li><a href="canvas-rectangle.html">Banner</a></li>
+				<li><a href="geolocation.html">Geo-location</a></li>
+			</ul>	
+		</nav>
+	</header>
+		
+	<main role="main">
+	<div class = "first">
+	<h2>Collect things you love, that are authentic to you and your HOUSE becomes your story!</h2>
+	</div>
+	
+
+	<section>
+	<h3>Geolocation</h3>
+		<div id="location">
+			Your location will be displayed here via the .js code.
+		</div>
+		<div id="distance"></div>
+		<div id = "audio">
+		<form>
+			<input type="button" id="watch" value="Watch Me!">
+			<input type="button" id="clearWatch" value="Clear Watch">
+		</form>
+		</div>
+		<div id="map"></div>
+	</section>
+
+<aside role="complementary">
+
+</aside>
+</main>
+<br>
+<footer role="contentinfo">
+<address>
+    Written by <a href="mailto:abc@beautifulmess.com">Pooja Daryani</a>.<br> 
+    Write or visit me at:<br>
+    BeautifulMess.com<br>
+    370 Elan Village<br>
+    San Jose, CA 95134
+</address>
+	<p><small>Pooja Copyright © <time>2019</time>. All rights reserved.</small></p>
+	</footer>
+<script>
+function outputUpdate(rate) {
+	document.querySelector('#rating').value = rate;
+}
+
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang ="en"><!-- accessibility -->
+<head>
+		<meta charset = "utf-8">
+		<title> A Beautiful Mess - Transform your home mess into a beautiful mess.</title>
+		<meta name="description" content="Check out the latest submission by one of our favourite regular customer.">
+		<meta name = "keywords" content="animation, mountains, river, grass,decor"> 
+		<meta name= "robots" content ="noindex">
+		<meta name ="viewport" content="width=device-width, initial-scale=1"><!-- for search engines -->
+		<link rel="stylesheet" href="main.css">
+		<style>
+		 #mycanvas {border:2px solid #666;}
+		
+		canvas {
+   			 display: block;
+  				margin: 0 auto;
+				}
+
+		</style>
+			<!-- [if lt IE9]>
+				<script src ="htmlshiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+			<script src="modernizr-custom.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+<img src="images/mainlogo1.jpg" alt="open symbol where a beautiful quote is written about home" class="logo">
+
+	<header role="banner">
+		<h1>A Beautiful Mess! </h1>
+	
+		<nav role="navigation">
+			<ul id="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="video-audio.html">Trendy Videos</a></li>
+				<li><a href="surveyform.html">Tell us More!</a></li>
+				<li><a href="canvastry.html">Latest Submission</a></li>
+				<li><a href="canvas.html">Second Submission</a></li>
+				<li><a href="canvas-rectangle.html">Banner</a></li>
+				<!--<li><a href="geolocation.html">Geo-location</a></li>-->
+				<li><a href="draganddrop.html">Calendar</a></li>
+			</ul>	
+		</nav>
+	</header>
+	
+	
+	<main role="main">
+	
+	<section>
+		<h2>Our latest submission by Miss Jane Doe. Isn't great?</h2>
+		<canvas id="mycanvas" width="800" height= "740"></canvas>
+		<div id="container">
+  		<canvas id="waterfall"></canvas>
+		</div>
+		<script>
+			//mountains
+			var cnv = document.getElementById('mycanvas');
+			var ctz = cnv.getContext('2d');
+			
+			// Creating a new image
+			var pict = new Image();
+			pict.src = 'images/canvas2.png';
+			pict.onload = function() {
+			ctz.drawImage(pict, 0,0, pict.width*0.50, pict.height*0.50);
+			}
+			var pict = new Image();
+			pict.src = 'images/canvas2.png';
+			pict.onload = function() {
+			ctz.drawImage(pict, 460,0, pict.width*0.50, pict.height*0.50);
+			}
+			//rectangle
+			var cnv = document.getElementById('mycanvas');
+			var ctx = cnv.getContext('2d');
+			
+			// Draw Rectangle
+			ctx.strokeStyle = '#41cdf4';
+			ctx.lineWidth = '10';
+			
+			ctx.fillStyle = '#46a4fc';
+			ctx.fillRect(0, 600, 800, 200) 
+			ctx.strokeRect(0, 600, 800, 200);
+			
+			//gradient
+			var cnv = document.getElementById('mycanvas');
+			var ctx = cnv.getContext('2d');
+			
+			var grd = ctx.createLinearGradient(0,0,600,0);
+			grd.addColorStop(0,'#41cdf4');
+			grd.addColorStop(0.35, '#f3ddff')
+			grd.addColorStop(0.75, '#47d6ff');
+			grd.addColorStop(1, '#f3ddff');
+			
+			ctx.fillStyle = grd;
+			ctx.fillRect(0,200, 900, 400);
+			
+			//water fountain
+			var mycanvasCanvas = function(c, cw, ch){
+            
+            var _this = this;
+            this.c = c;
+            this.ctx = c.getContext('2d');
+            this.cw = cw;
+            this.ch = ch;           
+            
+            this.particles = [];
+            this.particleRate = 6;
+            this.gravity = .15;
+                            
+
+            this.init = function(){             
+                this.loop();
+            };
+            
+            this.reset = function(){                
+                this.ctx.clearRect(0,0,this.cw,this.ch);
+                this.particles = [];
+            };
+                        
+            this.rand = function(rMi, rMa){return ~~((Math.random()*(rMa-rMi+1))+rMi);};
+            
+
+            this.Particle = function(){
+                var newWidth = _this.rand(1,20);
+                var newHeight = _this.rand(1, 105);
+                this.x = _this.rand(10+(newWidth/2), _this.cw-10-(newWidth/2));
+                this.y = -newHeight;
+                this.vx = 0;
+                this.vy = 0;
+                this.width = newWidth;
+                this.height = newHeight;
+                this.hue = _this.rand(200, 220);
+                this.saturation = _this.rand(30, 60);
+                this.lightness = _this.rand(30, 60);
+            };
+            
+            this.Particle.prototype.update = function(i){
+                this.vx += this.vx; 
+                this.vy += _this.gravity;
+                this.x += this.vx;
+                this.y += this.vy;                          
+            };
+            
+            this.Particle.prototype.render = function(){            
+                _this.ctx.strokeStyle = 'hsla('+this.hue+', '+this.saturation+'%, '+this.lightness+'%, .05)';
+                _this.ctx.beginPath();
+                _this.ctx.moveTo(this.x, this.y);
+                _this.ctx.lineTo(this.x, this.y + this.height);
+                _this.ctx.lineWidth = this.width/2;
+                _this.ctx.lineCap = 'round';
+                _this.ctx.stroke();
+            };
+            
+            this.Particle.prototype.renderBubble = function(){              
+                _this.ctx.fillStyle = 'hsla('+this.hue+', 40%, 40%, 1)';
+                _this.ctx.fillStyle = 'hsla('+this.hue+', '+this.saturation+'%, '+this.lightness+'%, .3)';
+                _this.ctx.beginPath();
+                _this.ctx.arc(this.x+this.width/2, _this.ch-20-_this.rand(0,10), _this.rand(1,8), 0, Math.PI*2, false);
+                _this.ctx.fill();
+            };
+                        
+            this.createParticles = function(){
+                var i = this.particleRate;
+                while(i--){
+                    this.particles.push(new this.Particle());
+                }
+            };
+            
+            this.removeParticles = function(){
+                var i = this.particleRate;
+                while(i--){
+                    var p = this.particles[i];
+                    if(p.y > _this.ch-20-p.height){
+                        p.renderBubble();
+                        _this.particles.splice(i, 1);
+                    }   
+                }
+            };
+                            
+            this.updateParticles = function(){                  
+                var i = this.particles.length;                      
+                while(i--){
+                    var p = this.particles[i];
+                    p.update(i);                                            
+                };                      
+            };
+            
+            this.renderParticles = function(){
+                var i = this.particles.length;                      
+                while(i--){
+                    var p = this.particles[i];
+                    p.render();                                         
+                };                  
+            };
+            
+            this.clearCanvas = function(){              
+                this.ctx.globalCompositeOperation = 'destination-out';
+                this.ctx.fillStyle = 'rgba(255,255,255,.06)';
+                this.ctx.fillRect(0,0,this.cw,this.ch);
+                this.ctx.globalCompositeOperation = 'lighter';
+            };
+            
+            this.loop = function(){
+                var loopIt = function(){                    
+                    requestAnimationFrame(loopIt, _this.c);                 
+                        _this.clearCanvas();                    
+                        _this.createParticles();                    
+                        _this.updateParticles();                    
+                        _this.renderParticles();    
+                        _this.removeParticles();
+                };
+                loopIt();                   
+            };
+        
+        };
+        
+    	var isCanvasSupported = function(){
+        var elem = document.createElement('canvas');
+        return !!(elem.getContext && elem.getContext('2d'));
+    };
+    
+   	 	var setupRAF = function(){
+        var lastTime = 0;
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x){
+            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+        };
+        
+        if(!window.requestAnimationFrame){
+            window.requestAnimationFrame = function(callback, element){
+                var currTime = new Date().getTime();
+                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                var id = window.setTimeout(function() { callback(currTime + timeToCall); }, timeToCall);
+                lastTime = currTime + timeToCall;
+                return id;
+            };
+        };
+        
+        if (!window.cancelAnimationFrame){
+            window.cancelAnimationFrame = function(id){
+                clearTimeout(id);
+            };
+        };
+    };          
+    
+    	if(isCanvasSupported()){
+            var c = document.getElementById('waterfall');
+            var cw = c.width = 200;
+            var ch = c.height = 340;    
+            var mycanvas = new mycanvasCanvas(c, cw, ch);           
+            setupRAF();
+            mycanvas.init();
+    }
+
+				
+		</script>	
+	</section>
+</main>
+<br><br>
+<footer role="contentinfo">
+<address>
+    Written by <a href="mailto:abc@beautifulmess.com">Pooja Daryani</a>.<br> 
+    Write or visit me at:<br>
+    BeautifulMess.com<br>
+    370 Elan Village<br>
+    San Jose, CA 95134
+</address>
+	<p><small>Pooja Copyright © <time>2019</time>. All rights reserved.</small></p>
+
+</footer>
+
+</div>
+</body>
+</html>
